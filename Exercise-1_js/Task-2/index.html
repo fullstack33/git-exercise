@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="">
+        <div class="header">
+            <h2 class="text-center">Name Record</h2>
+        </div>
+        <div class="container">
+            <div class="form">
+                <h4 class="text-center">Add Record</h4>
+                <div class="row">
+                    <div class="col col-sm-5">
+                        <input type="text" class="form-control" id="firstName" required placeholder="First Name">
+                    </div>
+                    <div class="col col-sm-5">
+                        <input type="text" class="form-control" id="lastName" required placeholder="Last Name">
+                    </div>
+                    <div class="col col-sm-2">
+                        <button class="btn btn-primary btn-block" id="addRecord" onclick="addDetails()"> Add </button>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-dark table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
