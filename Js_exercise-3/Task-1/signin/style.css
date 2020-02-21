@@ -1,0 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(241, 241, 241);
+}
+.navbar{
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.nav-item:hover{
+    background-color: rgb(148, 182, 245);
+}
+.signup{
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgb(109, 109, 109);
+}

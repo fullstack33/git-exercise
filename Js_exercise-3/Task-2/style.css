@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: rgb(228, 227, 226);
+}
+#searchInput{
+    border-bottom: 0;
+    outline: none !important;
+}
+#searchInput:focus{
+    box-shadow: none;
+}
+#showResult{
+    /* padding: 0px 15px; */
+    width: 100%;
+    min-height: 0vh;
+    background-color: #fff;
+}
+mark{
+    padding: 0em;
+    margin: 0em;
+    background-color: yellow
+}

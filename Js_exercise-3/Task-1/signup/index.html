@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rapidops</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light ">
+    <div class="container">
+      <a href="#" class="navbar-brand text-white">
+        <img src="#" alt="">Rapidops
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto text-center">
+          <li class="nav-item">
+            <a href="../signin/index.html" class="nav-link text-white">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a href="../signup/index.html" class="nav-link active text-white">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="container signup">
+      <h3 class="text-center">Sign Up</h2>
+        <form name="signupForm" method="post" onsubmit="return submitForm()">
+          <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" name="fname" class="form-control" id="name" autofocus placeholder="Enter FullName">
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+          </div>
+          <div class="form-group">
+            <label for="sel1">Select Role</label>
+            <select class="form-control" name='role' id="role" id="sel1">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
+          </div>
+          <div class="form-group">
+            <label for="">Confirm Password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Enter Confirm Password">
+          </div>
+
+          <input type="submit" class="btn btn-block btn-primary" value="Register">
+        </form>
+        <div class="mt-4">
+          <p>If you have already register <a href="../signin/index.html">click here</a></p>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
