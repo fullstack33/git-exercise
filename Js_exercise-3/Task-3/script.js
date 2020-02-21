@@ -46,7 +46,7 @@ document.addEventListener('keydown', function (event) {
             }
             nextColor(colorArr[currentIndex])
             currentIndex++;
-        }, 1000)
+        }, 5000)
     } else if (key === 'ArrowDown' || key === 'ArrowLeft') {
         clearInterval(nextSetTime)
         clearInterval(previousSetTime)
@@ -56,6 +56,6 @@ document.addEventListener('keydown', function (event) {
             }
             previousColor(colorArr[currentIndex])
             currentIndex--;
-        }, 1000)
+        }, 5000)
     }
 });
