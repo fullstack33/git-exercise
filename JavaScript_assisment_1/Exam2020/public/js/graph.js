@@ -111,7 +111,7 @@ fetch("/mapdata")
       layout: {
         name: 'grid',
         spacingFactor: 0.5,
-        rows: 5
+        rows: 3
       }
 
     });

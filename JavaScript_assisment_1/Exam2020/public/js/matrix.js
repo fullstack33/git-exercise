@@ -2,7 +2,7 @@ function mapdata() {
 
   let nodes = [];
   let edges = [];
-  let row = 5
+  let row = 3
   // Write your logic here...
 
 
@@ -26,76 +26,72 @@ function mapdata() {
         }
       })
     }
-    if (j - 1 >= 0 && i + 1 < row) {
-      edges.push({
-        "data": {
-          "id": `${i}-${j}WN`,
-          source: `N${i}-${j}`,
-          target: `N${i+1}-${j-1}`
-        }
-      })
-    }
-    if (j - 1 >= 0 && i - 1 >= 0) {
-      edges.push({
-        "data": {
-          "id": `${i}-${j}WS`,
-          source: `N${i}-${j}`,
-          target: `N${i-1}-${j-1}`
-        }
-      })
-    }
+    // if (j - 1 >= 0 && i + 1 < row) {
+    //   edges.push({
+    //     "data": {
+    //       "id": `${i}-${j}WN`,
+    //       source: `N${i}-${j}`,
+    //       target: `N${i+1}-${j-1}`
+    //     }
+    //   })
+    // }
+    // if (j - 1 >= 0 && i - 1 >= 0) {
+    //   edges.push({
+    //     "data": {
+    //       "id": `${i}-${j}WS`,
+    //       source: `N${i}-${j}`,
+    //       target: `N${i-1}-${j-1}`
+    //     }
+    //   })
+    // }
 
   }
 
   // calculate edges
-  const calculateEdges = () => {
-    for (let i = 0; i < row; i++) {
-      for (let j = 0; j < row; j++) {
-
-        if (j + 1 < row) {
-          edges.push({
-            "data": {
-              "id": `${i}-${j}E`,
-              source: `N${i}-${j}`,
-              target: `N${i}-${j+1}`
-            }
-          })
+  const calculateEdges = (i, j) => {
+    if (j + 1 < row) {
+      edges.push({
+        "data": {
+          "id": `${i}-${j}E`,
+          source: `N${i}-${j}`,
+          target: `N${i}-${j+1}`
         }
-
-        if (i + 1 < row) {
-          edges.push({
-            "data": {
-              "id": `${i}-${j}S`,
-              source: `N${i}-${j}`,
-              target: `N${i+1}-${j}`
-            }
-          })
-        }
-
-        if (j - 1 >= 0) {
-          edges.push({
-            "data": {
-              "id": `${i}-${j}W`,
-              source: `N${i}-${j}`,
-              target: `N${i}-${j-1}`
-            }
-          })
-        }
-
-        if (i - 1 >= 0) {
-          edges.push({
-            "data": {
-              "id": `${i}-${j}N`,
-              source: `N${i}-${j}`,
-              target: `N${i-1}-${j}`
-            }
-          })
-        }
-        // diagonal
-        diagonal(i, j)
-      }
+      })
     }
+
+    if (i + 1 < row) {
+      edges.push({
+        "data": {
+          "id": `${i}-${j}S`,
+          source: `N${i}-${j}`,
+          target: `N${i+1}-${j}`
+        }
+      })
+    }
+
+    if (j - 1 >= 0) {
+      edges.push({
+        "data": {
+          "id": `${i}-${j}W`,
+          source: `N${i}-${j}`,
+          target: `N${i}-${j-1}`
+        }
+      })
+    }
+
+    if (i - 1 >= 0) {
+      edges.push({
+        "data": {
+          "id": `${i}-${j}N`,
+          source: `N${i}-${j}`,
+          target: `N${i-1}-${j}`
+        }
+      })
+    }
+    // diagonal
+    diagonal(i, j)
   }
+
 
 
   // Calculate Nodes
@@ -108,12 +104,13 @@ function mapdata() {
           }
         }
         nodes.push(obj)
+        calculateEdges(i, j)
       }
     }
   }
 
   calculateNodes()
-  calculateEdges()
+
 
   elements = {
     nodes,
