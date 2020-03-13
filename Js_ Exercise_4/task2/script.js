@@ -14,11 +14,12 @@ const personArray = [
 ]
 
 let sportArr = []
-let sportObject = {}
+
 
 let listOfSport = () => {
     for (let person of personArray) {
         for (let hobby of person.sports) {
+            let sportObject = {}
             if (sportObject[hobby]) {
                 sportObject[hobby].push(person.name)
             } else {
