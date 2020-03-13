@@ -13,6 +13,7 @@ const personArray = [
     }
 ]
 
+let sportArr = []
 let sportObject = {}
 
 let listOfSport = () => {
@@ -23,8 +24,9 @@ let listOfSport = () => {
             } else {
                 sportObject[hobby] = [person.name]
             }
+            sportArr.push(sportObject)
         }
     }
 }
 listOfSport()
-console.log(sportObject)
+console.log(sportArr)
